@@ -12,5 +12,5 @@ token = (respuesta.json()["response"]["serviceTicket"])
 
 #Consulta del inventario
 cabecera_inventario = {"content-type": "application/json", "X-Auth-Token": token}
-inventario = requests.get(url_controller+"/api/v1/topology/physical-topology", headers=cabecera_inventario)
+inventario = requests.get(url_controller+"/api/v1/host", headers=cabecera_inventario)
 print(inventario.json())
