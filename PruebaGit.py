@@ -5,7 +5,7 @@ import json
 url_controller = "http://127.0.0.1:58000"
 
 #Obtenciòn del ticket
-data={"password":"admin123!","username":"admin"}
+data={"password":"admin123!", "username":"admin"}
 cabecera = {"content-type": "application/json"}
 respuesta = requests.post(url_controller+"/api/v1/ticket", json.dumps(data), headers=cabecera)
 token = (respuesta.json()["response"]["serviceTicket"])
